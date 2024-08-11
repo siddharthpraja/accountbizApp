@@ -28,16 +28,16 @@ const bars: Bar[] = [
 
 const HeroFooder = () => {
   return (
-    <div className="absolute px-5 py-2 flex flex-row justify-between items-center bottom-0 left-0 text-start w-full">
+    <div className="lg:absolute relative  px-5 py-2 flex lg:flex-row flex-col-reverse border lg:border-none gap-4 justify-between items-center bottom-0 left-0 text-start w-full">
       {/* Vertical Bar Chart */}
-      <div className="flex flex-col items-start justify-center border-black">
+      <div className="flex flex-col group items-start justify-center border-black">
         {bars2.map((bar, index) => (
           <div
             key={index}
             className="p-1 flex flex-row-reverse items-center text-xs gap-2   text-center"
           >
             <div
-              className={`h-4  text-center bg-black`}
+              className={`h-4 group-hover:h-6 text-center bg-black`}
               style={{
                 width: `${bar.value / 2}px`,
                 background: `${bar.bg}`,
@@ -48,17 +48,12 @@ const HeroFooder = () => {
         ))}
       </div>
       {/* Pai Chart */}
-      <div className="flex flex-row items-center gap-4 justify-start">
+      <div className="flex group flex-row items-center gap-4 justify-start">
         <div
+         className="w-24 group-hover:w-28 h-24 group-hover:h-28 rounded-full flex justify-center items-center"
           style={{
-            width: "100px",
-            height: "100px",
-            borderRadius: "50%",
             background:
               "conic-gradient(black 0% 20%, darkgray 20% 40%, gray 40% 80%, lightgray 80% 100%)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
           }}
         >
           <div
@@ -90,12 +85,12 @@ const HeroFooder = () => {
         </div>
       </div>
       {/*Horigental Bar Diagram */}
-      <div className="flex justify-center">
+      <div className="flex justify-center group">
         {bars.map((bar, index) => (
           <div key={index} className=" p-1 -rotate-180 text-center">
             <p className="rotate-180 text-xs">{bar.label}</p>
             <div
-              className={`w-4 text-center bg-black`}
+              className={`md:w-4 w-3 group-hover:w-4   md:group-hover:w-6 ease-in-out duration-500  text-center bg-black`}
               style={{
                 height: `${bar.value / 5}px`,
                 background: `${bar.bg}`,

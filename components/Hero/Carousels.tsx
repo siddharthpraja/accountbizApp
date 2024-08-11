@@ -30,16 +30,16 @@ const carouselsdata = [
 const Carousels = () => {
   return (
     <div>
-      <div className="text-center md:w-[96vw] w-full relative h-max  overflow-hidden">
+      <div className="text-center md:w-[96vw] w-full relative  overflow-hidden">
         <div className="slides ">
           {carouselsdata.map((item) => (
-            <div id={item.id} key={item.id} className="w-[96vw] lg:h-[81vh] ">
+            <div id={item.id} key={item.id} className="w-[96vw] lg:h-[80vh]  ">
               <Image
                 alt={item.id}
                 src={item.image}
                 width={1800}
                 height={1800}
-                className="w-full h-full bg-center object-cover"
+                className="w-full select-none max-h-full bg-center object-cover"
               />
             </div>
           ))}

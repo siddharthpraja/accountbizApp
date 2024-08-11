@@ -26,6 +26,18 @@
   }
 
 
+  .card2{
+    opacity: 0;
+  }
+
+  #dubblearrow:checked + label .rotate {
+    transform: rotate(180deg);
+  }
+
+  #dubblearrow:checked ~ .card2 {
+    opacity: 100;
+  }
+
 
   
   .slides {

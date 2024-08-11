@@ -10,11 +10,28 @@ const HeroNavbar = () => {
       {/* This is start Navbar */}
       <div className="md:flex hidden justify-between">
         {/* div 1 for  Sale Dashboard */}
-        <div className="flex gap-2 items-center">
-          <div className="p-2 bg-slate-950 text-slate-50">
-            <BsChevronDoubleDown />
+        <div className="flex gap-2 group items-center">
+          <input type="checkbox" id="dubblearrow" className="hidden" />
+          <label
+            htmlFor="dubblearrow"
+            className="p-2 bg-slate-950 cursor-pointer text-slate-50"
+          >
+            <BsChevronDoubleDown className="rotate ease-in-out duration-500" />
+          </label>
+          <h1  className="py-1 px-16 select-none  hover:border-2 border border-slate-950 relative">
+            Sale Dashboard
+          </h1>
+          <div className="absolute top-10 card2   bg-gray-100/70 ease-linear duration-500  text-slate-900 left-10">
+            <h1 className="py-1 px-12 border border-b-0 hover:border-2 border-slate-950 ">
+              Purchase Dashboard
+            </h1>
+            <h1 className="py-1 px-12 border border-b-0  hover:border-2 border-slate-950">
+              Ledger Dashboard
+            </h1>
+            <h1 className="py-1 px-12 border   hover:border-2 border-slate-950">
+              Stock Dashboard
+            </h1>
           </div>
-          <h1 className="py-1 px-16 border border-slate-950">Sale Dashboard</h1>
         </div>
         {/* div 2 for years */}
         <div className="flex gap-1">
